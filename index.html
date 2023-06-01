@@ -4,41 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="lines"></div>
     <header>
-        <div class="nav">
-        <div class="homelogo"><img src="images/Logos/logohome.png" alt="batlogo"></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-        </ul>
-        </div>
+        <nav>
+            <div class="nav-logo"><img src="/images/Logos/logohome.png" alt="Homo logo BATMAN"></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#" class="links-home">HOME</a></li>
+                    <li><a href="#" class="links-home">GAME</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
         <section id="intro">
-            <div class="intro-text">
-                <p>Au nom de ses parents assassinés, Bruce Wayne mène <br> une guerre éternelle 
-                contre les criminels de Gotham City. <br> Il est vengeur. Il est la nuit.
-                <br><span style="font-weight: bold; font-size: 1.2em;">Il est Batman.</span></p>
-                <div class="button">
-                    <a class="btn" href="#home">VOIR LE HEROS</a>
-                    <a class="btn" href="#enemy">LES ADVERSAIRES</a>
-                </div>
-            </div>
-            <div class="scroll">
-                <a href="#intro"><img src="images/Logos/logo_bat_flèche.png" alt="down"></a>
-                    <div class="mediasoc">
-                        <img src="images/Logos/icon_facebook.png" alt="">
-                        <img src="images/Logos/icon_ig.png" alt="">
-                        <img src="images/Logos/icon_tw.png" alt="">
+            <div class="parent">
+                <div class="intro-text">
+                    <p>Au nom de ses parents assassinés, Bruce Wayne mène une guerre éternelle 
+                    contre les criminels de Gotham City. <br> Il est vengeur. Il est la nuit.
+                    <br><span style="font-weight: bold; font-size: 1.2em;">Il est Batman.</span></p>
+                    <div class="button">
+                        <button type="button" class="btn" onclick="">VOIR LE HEROS</button>
+                        <button type="button" class="btn" onclick="">LES ADVERSAIRES</button>
                     </div>
-                <a href="#contact"><img src="images/Logos/logo_bat_flèche_2.png" alt="up"></a>
+                </div>
+                <div class="scroll">
+                    <div class="up"><a href="#intro"><img src="images/Logos/logo_bat_flèche.png" alt="down"></a></div>
+                        <div class="mediasoc">
+                            <div><img src="images/Logos/icon_facebook.png" alt=""></div>
+                            <div><img src="images/Logos/icon_ig.png" alt=""></div>
+                            <div><img src="images/Logos/icon_tw.png" alt=""></div>
+                        </div>
+                    <div class="up down"><a href="#contact"><img src="images/Logos/logo_bat_flèche_2.png" alt="up"></a></div>
+                </div>
             </div>
         </section>
         <div class="flèche">
-            <a href="#home"><img src="images/Logos/flèche_down_header.png" alt=""></a>
+            <img src="images/Logos/flèche_down_header.png" alt="">
         </div>
         <section id="home">
             <div class="titles-stuff">
@@ -54,24 +60,26 @@
             <div class="thebats">
                 <div>
                     <img src="images/Illustrations/Bathome2.png" alt="">
-                    <p>Robert Pattinson <br>(2022)</p>
+                    <h6>Robert Pattinson <br>(2022)</h6>
                 </div>
                 <div>
                     <img src="images/Illustrations/Bathome3.png" alt="">
-                    <p>Christian Bale <br>(2006 - 2008 - 2012)</p>
+                    <h6>Christian Bale <br>(2006 - 2008 - 2012)</h6>
                 </div>
                 <div>
                     <img src="images/Illustrations/Bathome4.png" alt="">
-                    <p>Ben Affleck <br>2016- 2017/2020 – 2023</p>
+                    <h6>Ben Affleck <br>2016- 2017/2020 – 2023</h6>
                 </div>
             </div>
         </section>
-        <div class="batarang">
-            <img src="/images/Illustrations/Bathome13.png" alt="">
-        </div>
         <section id="enemy">
-            <div class="titles-stuff">
-                <h1>NÉMÉSIS</h1>
+            <div class="foe titles-stuff">
+                <div class="bata">
+                    <h1>NÉMÉSIS</h1>
+                    <div class="batarang">
+                        <img src="/images/Illustrations/Bathome13.png" alt="">
+                    </div>
+                </div>
                 <p>Batman souhaite éradiquer la criminalité de Gotham. C’est pourquoi, il affrontera la plupart
                     du temps, des vilains sans capacités surnaturelles mais particulièrement violents ou
                     psychopathes. Avec son introduction dans la Justice League il aura l’occasion de se mesurer à
@@ -82,20 +90,22 @@
             <div class="thebats">
                 <div>
                     <img src="images/Illustrations/Bathome5.png" alt="">
-                    <p>The Riddler - Paul Dano<br>(2022)</p>
+                    <h6>The Riddler - Paul Dano<br>(2022)</h6>
                 </div>
                 <div>
                     <img src="images/Illustrations/Bathome6.png" alt="">
-                    <p>Le Joker - Heath Ledger<br>(2008)</p>
+                    <h6>Le Joker - Heath Ledger<br>(2008)</h6>
                 </div>
                 <div>
                     <img src="images/Illustrations/Bathome7.png" alt="">
-                    <p> Darkseid - Ray Porter<br>(2022)</p>
+                    <h6> Darkseid - Ray Porter<br>(2022)</h6>
                 </div>
-        </div>
+            </div>
         </section>
         <div class="vigilent">
-            <img src="/images/Illustrations/Bathome12.png" alt="">
+            <div class="random">
+                <img src="/images/Illustrations/Bathome12.png" alt="">
+            </div>
         </div>
         <section id="ally">
             <div class="titles-stuff">
@@ -111,20 +121,20 @@
             <div class="thebats">
                 <div>
                     <img src="images/Illustrations/Bathome8.png" alt="">
-                    <p>Alfred Pennyworth - <br> Michael Cain<br>(2006 - 2008 - 2012)</p>
+                    <h6>Alfred Pennyworth - <br> Michael Cain<br>(2006 - 2008 - 2012)</h6>
                 </div>
                 <div>
                     <img src="images/Illustrations/Bathome9.png" alt="">
-                    <p>Catwoman - Zoé Kravitz<br>(2008)</p>
+                    <h6>Catwoman - Zoé Kravitz<br>(2008)</h6>
                 </div>
                 <div>
                     <img src="images/Illustrations/Bathome10.png" alt="">
-                    <p>James Gordon<br>(2014-2019)</p>
+                    <h6>James Gordon<br>(2014-2019)</h6>
                 </div>
         </div>
         </section>
         <section id="justiceleague">
-            <div class="titles-stuff-jl">
+            <div class="titles-stuff jlt">
                 <h1>JUSTICE LEAGUE</h1>
                 <p>Lorsque la Terre est menacée les plus grands super-héros s’allient pour la protéger. Ils
                     doivent cependant apprendre à se faire confiance mutuellement et à faire équipe ce qui ne
@@ -138,9 +148,7 @@
             </div>
         </section>
         <section id="trailer">
-            <div class="trailer">
-                <h1>MULTIMEDIA</h1>
-            </div>
+            <div class="trailer"><h1>MULTIMEDIA</h1></div>
             <div class="media">
                 <div class="arrow"><img src="images/Logos/icon_flèche_1.png" alt=""></div>
                 <div class="synopsis">
@@ -170,14 +178,14 @@
             <form>
                 <div class="formulaire">
                     <span style="text-align: center;"><h1>PRENONS CONTACT</h1></span>
-                    <div>
+                    <div class="one">
                         <h2>ADRESSE EMAIL</h2>
                         <input type="Adresse email" placeholder="Adresse email">
                     </div>
-                    <div class="checkbox">
+                    <div class="two">
                         <h2>NEWSLETTER</h2>
                         <label for="chck">En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de Batman :</label>
-                        <input type="checkbox" id="chck">
+                        <input type="checkbox" id="chck" style="width: 20px;">
                     </div>
                     <div>
                         <select id="selection">
@@ -187,19 +195,19 @@
                             <option value="monthly">Par mois</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="three">
                         <p>Souhaitez-vous recevoir des news</p>
-                        <div class="button2" id="button2">
-                            <a class="btn2" href="">Des films</a>
-                            <a class="btn2" href="">Des comics</a>
-                            <a class="btn2" href="">De tout</a>
+                        <div class="button">
+                            <button type="button" class="btn2">Des films</button>
+                            <button type="button" class="btn2">Des comics</button>
+                            <button type="button" class="btn2">De tout</button>
                         </div>
                     </div>
-                    <div>
+                    <div class="four">
                         <h2>MESSAGE</h2>
                         <input type="sms" placeholder="Laissez un commentaire pour la communauté">
-                        <div class="button3">
-                            <a class="btn" href="">CONFIRMER</a>
+                        <div class="button">
+                            <button type="button">CONFIRMER</button>
                         </div>
                     </div>
                 </div>
@@ -213,18 +221,18 @@
                 <div><strong><p>La seule façon raisonnable de vivre en ce bas monde, <br> c'est en dehors des règles.<br></strong></div> 
                 <div style="padding-top: 3%; font-size: 0.8em;"><p>The Dark Knight : Le Chevalier Noir - <br>Le Joker à Batman (2008)</p></div>
             </div>
-            <div style="text-align: center; padding-top: 1%;">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot" style="background-color: #429ef5;"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+            <div class="point">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot" style="background-color: #429ef5;"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
-            <div class="rightg">
+            <div class="rightd">
                 <img src="images/Logos/icon_guillemets_2.png" alt="">
             </div>
         </section>

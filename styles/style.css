@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/*reseting default annoying settings*/
+* {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+/*font importation*/
+@font-face {
+  font-family: "Titre";
+  src: url("/fonts/Rajdhani-Medium.ttf");
+}
+@font-face {
+  font-family: "Titre H2";
+  src: url("/fonts/SpaceGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "Texte";
+  src: url("/fonts/SpaceGrotesk-Regular.ttf");
+}
+h1, ul li {
+  font-family: "Titre";
+  font-size: 2.25em;
+}
+
+button {
+  font-family: "Titre";
+  font-size: 1.25em;
+}
+
+h6, h3 {
+  font-family: "Titre H2";
+  font-size: 0.9em;
+}
+
+p {
+  font-family: "Texte";
+  font-size: 1.125em;
+}
+
+/*Background*/
+body {
+  background: black url("/images/Illustrations/Bathome1.png") 80% 20%/cover no-repeat;
+  height: 901px;
+  font-size: 16px;
+}
+
+.lines {
+  border: 2px solid rgba(102, 99, 99, 0.233);
+  width: 100%;
+  top: 80px;
+  position: absolute;
+}
+
+main {
+  z-index: 2;
+}
+
+/*barre de navigation*/
+nav {
+  position: relative;
+  padding-top: 20px;
+}
+nav .nav-logo {
+  position: absolute;
+  left: 5%;
+}
+nav .nav-links {
+  position: absolute;
+  right: 5%;
+}
+nav .nav-links ul li {
+  display: inline-block;
+}
+nav .links-home {
+  position: relative;
+}
+nav .links-home::before {
+  content: "";
+  border: 2px solid rgba(255, 255, 255, 0.404);
+  border-top: none;
+  position: absolute;
+  bottom: -5px;
+  left: -6px;
+  width: 0%;
+  height: 0%;
+  transition: all 0.3s;
+}
+nav .links-home::before:hover {
+  width: 100%;
+}
+
+/**/
+.flèche {
+  text-align: center;
+  margin-bottom: 15%;
+}
+.flèche img {
+  width: 50px;
+}
+
+/**/
+#intro {
+  height: 901px;
+}
+#intro .parent {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 375PX;
+  text-align: center;
+  width: 50%;
+}
+/**/
+.scroll {
+  position: fixed;
+  z-index: 1;
+  top: 35%;
+  right: 2%;
+  align-items: center;
+  transition: 0.5s all ease-in-out;
+}
+.scroll .mediasoc div {
+  padding: 5px 0;
+}
+
+/*responsive part for the scroll*/
+@media screen and (min-width: 850px) and (max-width: 1200px) {
+  .scroll .up a img {
+    width: 70px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .scroll {
+    right: -2%;
+  }
+  .scroll .up {
+    transform: rotate(-90deg);
+    margin: 25% 0;
+  }
+  .scroll .up a img {
+    width: 80px;
+  }
+  .scroll .down {
+    transform: rotate(90deg);
+  }
+}
+/**/
+button {
+  background: linear-gradient(to right, #EDDEBF, #890008);
+  border: none;
+  padding: 1% 2%;
+  margin: 10px 2%;
+  opacity: 0.4;
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 1;
+}
+
+.button {
+  text-align: center;
+}
+
+.btn2 {
+  background: none;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #EDDEBF, #19587D) 1;
+}
+
+/**/
+@media screen and (max-width: 850px) {
+  button {
+    padding: 2% 3%;
+  }
+}
+/**/
+.titles-stuff {
+  margin: 0 12%;
+  padding-top: 10%;
+  text-align: justify;
+}
+
+.thebats {
+  margin: 35px 12%;
+  display: flex;
+  gap: 5%;
+  text-align: center;
+}
+.thebats h6 {
+  padding-top: 10px;
+}
+.thebats img {
+  width: 90%;
+  transition: 0.5s transform ease-in-out;
+}
+.thebats img:hover {
+  transform: scale(1.1);
+}
+
+/**/
+.vigilent {
+  position: relative;
+  height: 30vh;
+}
+.vigilent .random {
+  position: absolute;
+  right: 0;
+}
+.vigilent .random img {
+  height: 40vh;
+}
+
+.bata {
+  position: relative;
+}
+.bata .batarang {
+  position: absolute;
+  top: -60px;
+  left: 65px;
+}
+.bata .batarang img {
+  width: 100px;
+}
+
+/**/
+#justiceleague .jlt {
+  margin: 0 15% 10% 15%;
+}
+#justiceleague .jl {
+  margin: 0;
+}
+#justiceleague .jl img {
+  width: 100%;
+}
+
+/**/
+.media {
+  display: flex;
+  align-items: center;
+  margin: 5% 0;
+}
+.media .synopsis {
+  height: 230px;
+  display: flex;
+  overflow: hidden;
+}
+.media .arrow {
+  margin: 0 10px;
+}
+
+/**/
+.video {
+  text-align: center;
+}
+.video img {
+  width: 80%;
+}
+
+/**/
+form {
+  background: linear-gradient(to bottom right, #4e4940, #091e2a);
+  padding: 5% 10%;
+  margin: 15% 0;
+  line-height: 30px;
+}
+form input, form select {
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+}
+form input:focus, form select:focus {
+  outline: none;
+}
+
+.one, .two, .three, .four {
+  margin: 15px 0;
+}
+
+/**/
+#quotes {
+  margin: 25% 10%;
+}
+#quotes img {
+  width: 10vh;
+}
+#quotes .leftg {
+  text-align: left;
+}
+#quotes .quotes {
+  text-align: center;
+  margin: 5% 0;
+}
+#quotes .rightd {
+  text-align: right;
+}
+#quotes .point {
+  display: flex;
+  justify-content: center;
+}
+#quotes .point .dot {
+  margin: 5px 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  border: 1px solid #429ef5;
+}
+
+/**/
+footer .copyright {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0 10%;
+}
+footer .copyright img {
+  width: 30px;
+  height: 30px;
+}
+footer .credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  gap: 2%;
+}
+
+/**/
+
+/*# sourceMappingURL=style.css.map */
