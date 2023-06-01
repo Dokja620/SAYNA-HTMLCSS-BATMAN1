@@ -59,16 +59,43 @@ nav{
     .nav-logo{
         position: absolute;
         left: 5%;
+        img{
+            cursor: pointer;
+            transition: filter .4s ease-in-out;
+            &:hover{
+                filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+            }
+        }
     }
     .nav-links{
         position: absolute;
         right: 5%;
         ul li{
             display: inline-block;
+            padding: 0 15px;
+            a{
+                margin: auto;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: yellow;
+                    transform-origin: bottom center;
+                    transition: transform .25s ease-out;
+                }
+                &:hover{
+                    filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+                    &::after{
+                        transform: scaleX(1);
+                    }
+                }
+            }
         }
-    }
-    .links-home{
-        margin: auto;
     }
 }
 /**/
@@ -77,6 +104,11 @@ nav{
     margin-bottom: 15%;
     img{
         width: 50px;
+        cursor: pointer;
+        transition: filter .4s ease-in-out;
+        &:hover{
+            filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+        }
     }
 }
 /**/
@@ -102,6 +134,13 @@ nav{
     transition: .5s all ease-in-out;
     .mediasoc div{
         padding: 5px 0;
+    }
+    img{
+        cursor: pointer;
+        transition: filter .4s ease-in-out;
+        &:hover{
+            filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+        }
     }
 }
     /*responsive part for the scroll*/
@@ -179,6 +218,15 @@ button{
     }
 }
 /**/
+@media screen and (max-width: 850px) {
+    .titles-stuff{
+        margin: 0 16% 0 12%;
+    }
+    .thebats{
+        margin: 35px 16% 35px 12%;
+    }
+}
+/**/
 .vigilent{
     position: relative;
     height: 30vh;
@@ -198,6 +246,16 @@ button{
         left: 65px;
         img{
             width: 100px;
+        }
+    }
+}
+/**/
+@media screen and (max-width: 850px) {
+    .vigilent{
+        .random{
+            img{
+                height: 30vh;
+            }
         }
     }
 }

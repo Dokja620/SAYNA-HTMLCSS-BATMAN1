@@ -70,29 +70,42 @@ nav .nav-logo {
   position: absolute;
   left: 5%;
 }
+nav .nav-logo img {
+  cursor: pointer;
+  transition: filter 0.4s ease-in-out;
+}
+nav .nav-logo img:hover {
+  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+}
 nav .nav-links {
   position: absolute;
   right: 5%;
 }
 nav .nav-links ul li {
   display: inline-block;
+  padding: 0 15px;
 }
-nav .links-home {
+nav .nav-links ul li a {
+  margin: auto;
   position: relative;
 }
-nav .links-home::before {
+nav .nav-links ul li a::after {
   content: "";
-  border: 2px solid rgba(255, 255, 255, 0.404);
-  border-top: none;
   position: absolute;
-  bottom: -5px;
-  left: -6px;
-  width: 0%;
-  height: 0%;
-  transition: all 0.3s;
-}
-nav .links-home::before:hover {
   width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: yellow;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+nav .nav-links ul li a:hover {
+  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+}
+nav .nav-links ul li a:hover::after {
+  transform: scaleX(1);
 }
 
 /**/
@@ -102,6 +115,11 @@ nav .links-home::before:hover {
 }
 .flèche img {
   width: 50px;
+  cursor: pointer;
+  transition: filter 0.4s ease-in-out;
+}
+.flèche img:hover {
+  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 
 /**/
@@ -126,6 +144,13 @@ nav .links-home::before:hover {
 }
 .scroll .mediasoc div {
   padding: 5px 0;
+}
+.scroll img {
+  cursor: pointer;
+  transition: filter 0.4s ease-in-out;
+}
+.scroll img:hover {
+  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 
 /*responsive part for the scroll*/
@@ -204,6 +229,15 @@ button:hover {
 }
 
 /**/
+@media screen and (max-width: 850px) {
+  .titles-stuff {
+    margin: 0 16% 0 12%;
+  }
+  .thebats {
+    margin: 35px 16% 35px 12%;
+  }
+}
+/**/
 .vigilent {
   position: relative;
   height: 30vh;
@@ -228,6 +262,12 @@ button:hover {
   width: 100px;
 }
 
+/**/
+@media screen and (max-width: 850px) {
+  .vigilent .random img {
+    height: 30vh;
+  }
+}
 /**/
 #justiceleague .jlt {
   margin: 0 15% 10% 15%;
