@@ -99,10 +99,11 @@ nav .nav-links ul li a::after {
   left: 0;
   background-color: yellow;
   transform-origin: bottom center;
-  transition: transform 0.25s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 nav .nav-links ul li a:hover {
   filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+  font-weight: 600;
 }
 nav .nav-links ul li a:hover::after {
   transform: scaleX(1);
@@ -300,6 +301,10 @@ button:hover {
 }
 .video img {
   width: 80%;
+  transition: all 0.25s ease-in-out;
+}
+.video img:hover {
+  filter: drop-shadow(0 0 10px white);
 }
 
 /**/
@@ -364,6 +369,11 @@ footer .copyright {
 footer .copyright img {
   width: 30px;
   height: 30px;
+  cursor: pointer;
+  transition: filter 0.25s ease-in-out;
+}
+footer .copyright img:hover {
+  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 footer .credit {
   display: flex;
@@ -371,6 +381,13 @@ footer .credit {
   justify-content: center;
   padding: 10%;
   gap: 2%;
+}
+footer .credit img {
+  cursor: pointer;
+  transition: filter 0.25s ease-in-out;
+}
+footer .credit img:hover {
+  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 
 /**/

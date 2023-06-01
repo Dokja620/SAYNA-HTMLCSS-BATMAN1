@@ -86,10 +86,11 @@ nav{
                     left: 0;
                     background-color: yellow;
                     transform-origin: bottom center;
-                    transition: transform .25s ease-out;
+                    transition: all .5s ease-in-out;
                 }
                 &:hover{
                     filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+                    font-weight: 600;
                     &::after{
                         transform: scaleX(1);
                     }
@@ -290,6 +291,10 @@ button{
     text-align: center;
     img{
         width: 80%;
+        transition: all .25s ease-in-out;
+        &:hover{
+            filter: drop-shadow(0 0 10px white);
+        }
     }
 }
 /**/
@@ -351,6 +356,11 @@ footer{
         img{
             width: 30px;
             height: 30px;
+            cursor: pointer;
+            transition: filter .25s ease-in-out;
+            &:hover{
+                filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+            }
         }
     }
     .credit{
@@ -359,6 +369,13 @@ footer{
         justify-content: center;
         padding: 10%;
         gap: 2%;
+        img{
+            cursor: pointer;
+            transition: filter .25s ease-in-out;
+            &:hover{
+                filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+            }
+        }
     }
 }
 /**/
