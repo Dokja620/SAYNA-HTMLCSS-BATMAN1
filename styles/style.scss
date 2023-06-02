@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: normal;
+    scroll-behavior: smooth;
 }
 /*font importation*/
 @font-face {
@@ -25,7 +26,7 @@ h1, ul li{
     font-family: 'Titre';
     font-size: 2.25em;
 }
-button{
+button, h2{
     font-family: 'Titre';
     font-size: 1.25em;
 }
@@ -33,9 +34,12 @@ h6,h3{
     font-family: 'Titre H2';
     font-size: .9em;
 }
-p{
+p, label{
     font-family: 'Texte';
     font-size: 1.125em;
+}
+label{
+    color: grey;
 }
 /*Background*/
 body{
@@ -43,11 +47,32 @@ body{
     height: 901px;
     font-size: 16px;
 }
+@media screen and (max-width: 900px) {
+    body{
+        font-size: 14px;
+    }
+}
+/**/
 .lines{
     border: 2px solid rgba(102, 99, 99, 0.233);
-    width: 100%;
+    width: 90%;
     top: 80px;
+    left: 5%;
     position: absolute;
+}
+.lines-ver{
+    position: fixed;
+    top: 0; left: 5%;
+    width: 4px;
+    height: 100vh;
+    background: rgba(102, 99, 99, 0.233);
+}
+.lines-ver-2{
+    position: fixed;
+    top: 0; right: 5%;
+    width: 4px;
+    height: 100vh;
+    background: rgba(102, 99, 99, 0.233);
 }
 main{
     z-index: 2;
@@ -58,7 +83,7 @@ nav{
     padding-top: 20px;
     .nav-logo{
         position: absolute;
-        left: 5%;
+        left: 8%;
         img{
             cursor: pointer;
             transition: filter .4s ease-in-out;
@@ -69,7 +94,7 @@ nav{
     }
     .nav-links{
         position: absolute;
-        right: 5%;
+        right: 6%;
         ul li{
             display: inline-block;
             padding: 0 15px;
@@ -121,8 +146,6 @@ nav{
         padding-top: 375PX;
         text-align: center;
         width: 50%;
-        .intro-text{
-        }
     }
 }
 /**/
@@ -130,7 +153,7 @@ nav{
     position: fixed;
     z-index: 1;
     top: 35%;
-    right: 2%;
+    right: 1.2%;
     align-items: center;
     transition: .5s all ease-in-out;
     .mediasoc div{
@@ -147,6 +170,7 @@ nav{
     /*responsive part for the scroll*/
     @media screen and (min-width: 850px) and (max-width: 1200px) {
         .scroll{
+            right: 1.1%;
             .up{
                 a img{
                     width: 70px;
@@ -276,14 +300,38 @@ button{
 .media{
     display: flex;
     align-items: center;
-    margin: 5% 0;
+    margin: 10% auto;
+    width: 80%;
     .synopsis{
         height: 230px;
         display: flex;
-        overflow: hidden;
+        background: linear-gradient(to bottom right, #4e4940, #091e2a);
+        border-radius: 0 20px 20px 0;
+        .texts{
+            padding: 10px 15px;
+        }
     }
     .arrow{
-        margin: 0 10px;
+        margin: 0 30px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .media{
+        width: 100%;
+        .synopsis{
+            height: max-content;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .media{
+        width: 90%;
+        .synopsis{
+            border-radius: 0 20px 20px 20px;
+            img{
+                display: none;
+            }
+        }
     }
 }
 /**/
@@ -300,10 +348,11 @@ button{
 /**/
 form{
     background: linear-gradient(to bottom right, #4e4940, #091e2a);
-    padding: 5% 10%;
+    padding: 5% 12%;
     margin: 15% 0;
     line-height: 30px;
     input, select{
+        font-family: 'Texte';
         background: none;
         border-top: none;
         border-left: none;
@@ -312,6 +361,9 @@ form{
         &:focus{
             outline: none;
         }
+    }
+    [value]{
+        background-color: grey;
     }
 }
 .one, .two, .three, .four{
