@@ -11,7 +11,7 @@
   scroll-behavior: smooth;
 }
 
-/*font importation*/
+/*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
 @font-face {
   font-family: "Titre";
   src: url("/fonts/Rajdhani-Medium.ttf");
@@ -48,19 +48,32 @@ label {
   color: grey;
 }
 
-/*Background*/
+/*Si vous lisez ceci; pour que tout soit plus claire... 
+lisez mon SCSS au lieu du CSS
+*/
+/* Pour faciliter mon "codage" j'ai fait deux parties qui se superpose
+en gros j'ai directement mis un plusieur media querry alors que c'était pas
+necessaires... J'ai mis la partie responsive du code juste en dessous pour
+plus de clareté...
+*/
+/* Dernière chose... Les commentaires sont juste là pour indiquer quel partie
+est sur ces lignes... J'ai pas eu le temps d'expliquer lignes par ligne tout
+ce que j'ai fais
+*/
+/*Background... First thing that the user will see...*/
 body {
   background: black url("/images/Illustrations/Bathome1.png") 80% 20%/cover no-repeat;
   height: 901px;
   font-size: 16px;
 }
 
+/*Responsive*/
 @media screen and (max-width: 900px) {
   body {
     font-size: 14px;
   }
 }
-/**/
+/*I had to use this instead of border 'cause it's easier to make it responsive this way*/
 .lines {
   border: 2px solid rgba(102, 99, 99, 0.233);
   width: 90%;
@@ -87,11 +100,12 @@ body {
   background: rgba(102, 99, 99, 0.233);
 }
 
+/*forgot what the purpose of this... It's important so let's just let it be*/
 main {
   z-index: 2;
 }
 
-/*barre de navigation*/
+/*barre de navigation... Home logo and other page links*/
 nav {
   position: relative;
   padding-top: 20px;
@@ -139,7 +153,7 @@ nav .nav-links ul li a:hover::after {
   transform: scaleX(1);
 }
 
-/**/
+/*the little arrow that is there for... I don't really know why...*/
 .flèche {
   text-align: center;
   margin-bottom: 15%;
@@ -153,7 +167,7 @@ nav .nav-links ul li a:hover::after {
   filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 
-/**/
+/*First section*/
 #intro {
   height: 901px;
 }
@@ -165,7 +179,7 @@ nav .nav-links ul li a:hover::after {
   width: 50%;
 }
 
-/**/
+/*The scroll bar*/
 .scroll {
   position: fixed;
   z-index: 1;
@@ -186,6 +200,7 @@ nav .nav-links ul li a:hover::after {
 }
 
 /*responsive part for the scroll*/
+/*first I'll just resize it*/
 @media screen and (min-width: 850px) and (max-width: 1200px) {
   .scroll {
     right: 1.1%;
@@ -194,6 +209,7 @@ nav .nav-links ul li a:hover::after {
     width: 70px;
   }
 }
+/*and then I rotated the arrow like bat stuff... 'cause there no much space*/
 @media screen and (max-width: 850px) {
   .scroll {
     right: -2%;
@@ -209,7 +225,7 @@ nav .nav-links ul li a:hover::after {
     transform: rotate(90deg);
   }
 }
-/**/
+/*All buttons have their propreties here... Easier and fastest way to make it*/
 button {
   background: linear-gradient(to right, #EDDEBF, #890008);
   border: none;
@@ -233,13 +249,13 @@ button:hover {
   border-image: linear-gradient(to right, #EDDEBF, #19587D) 1;
 }
 
-/**/
+/*Responsive... Button...Adjusting the size*/
 @media screen and (max-width: 850px) {
   button {
     padding: 2% 3%;
   }
 }
-/**/
+/*Three section share those propreties... They look alike so I gave 'em the same classes*/
 .titles-stuff {
   margin: 0 12%;
   padding-top: 10%;
@@ -258,12 +274,13 @@ button:hover {
 .thebats img {
   width: 90%;
   transition: 0.5s transform ease-in-out;
+  cursor: pointer;
 }
 .thebats img:hover {
   transform: scale(1.1);
 }
 
-/**/
+/*Responsive*/
 @media screen and (max-width: 850px) {
   .titles-stuff {
     margin: 0 16% 0 12%;
@@ -272,7 +289,7 @@ button:hover {
     margin: 35px 16% 35px 12%;
   }
 }
-/**/
+/*Hors section 1 the batman who just do? I don't even know what he's doing there*/
 .vigilent {
   position: relative;
   height: 30vh;
@@ -285,6 +302,7 @@ button:hover {
   height: 40vh;
 }
 
+/*Hors section 2 The batarang... I struggle for this one... It was hard but... Now that I did it... I'm thankfull*/
 .bata {
   position: relative;
 }
@@ -297,13 +315,13 @@ button:hover {
   width: 100px;
 }
 
-/**/
+/*Responsive hors section*/
 @media screen and (max-width: 850px) {
   .vigilent .random img {
     height: 30vh;
   }
 }
-/**/
+/*Justice league part*/
 #justiceleague .jlt {
   margin: 0 15% 10% 15%;
 }
@@ -314,7 +332,7 @@ button:hover {
   width: 100%;
 }
 
-/**/
+/*Movie trailer part*/
 .media {
   display: flex;
   align-items: center;
@@ -334,6 +352,7 @@ button:hover {
   margin: 0 30px;
 }
 
+/*Responsive partie trailer*/
 @media screen and (max-width: 1200px) {
   .media {
     width: 100%;
@@ -353,7 +372,7 @@ button:hover {
     display: none;
   }
 }
-/**/
+/*Hors section, partie vidéo... */
 .video {
   text-align: center;
 }
@@ -365,7 +384,7 @@ button:hover {
   filter: drop-shadow(0 0 10px white);
 }
 
-/**/
+/*Last part the form*/
 form {
   background: linear-gradient(to bottom right, #4e4940, #091e2a);
   padding: 5% 12%;
@@ -391,7 +410,7 @@ form [value] {
   margin: 15px 0;
 }
 
-/**/
+/*the real last part... Last but not a least... Quotes*/
 #quotes {
   margin: 25% 10%;
 }
@@ -420,7 +439,7 @@ form [value] {
   border: 1px solid #429ef5;
 }
 
-/**/
+/*Finaly the footer, It's all I guess*/
 footer .copyright {
   text-align: center;
   justify-content: center;
@@ -452,6 +471,6 @@ footer .credit img:hover {
   filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 
-/**/
+/*END!*/
 
 /*# sourceMappingURL=style.css.map */
