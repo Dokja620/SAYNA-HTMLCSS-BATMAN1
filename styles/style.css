@@ -9,8 +9,19 @@
   box-sizing: border-box;
   font-weight: normal;
   scroll-behavior: smooth;
+  animation: fade-in 0.5s ease-in;
 }
 
+/*partie animation, fade in*/
+@keyframes fade-in {
+  from {
+    transform: translateX(-10%);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 /*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
 @font-face {
   font-family: "Titre";
