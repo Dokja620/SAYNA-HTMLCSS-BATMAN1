@@ -59,18 +59,6 @@ label {
   color: grey;
 }
 
-/*Si vous lisez ceci; pour que tout soit plus claire... 
-lisez mon SCSS au lieu du CSS
-*/
-/* Pour faciliter mon "codage" j'ai fait deux parties qui se superpose
-en gros j'ai directement mis un plusieur media querry alors que c'était pas
-necessaires... J'ai mis la partie responsive du code juste en dessous pour
-plus de clareté...
-*/
-/* Dernière chose... Les commentaires sont juste là pour indiquer quel partie
-est sur ces lignes... J'ai pas eu le temps d'expliquer lignes par ligne tout
-ce que j'ai fais
-*/
 /*Background... First thing that the user will see...*/
 body {
   background: black url("/images/Illustrations/Bathome1.png") 80% 20%/cover no-repeat;
