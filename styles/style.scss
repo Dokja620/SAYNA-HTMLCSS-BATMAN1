@@ -25,15 +25,15 @@
 /*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
 @font-face {
     font-family: 'Titre';
-    src: url('/fonts/Rajdhani-Medium.ttf');
+    src: url('../fonts/Rajdhani-Medium.ttf');
 }
 @font-face {
     font-family: 'Titre H2';
-    src: url('/fonts/SpaceGrotesk-Bold.ttf');
+    src: url('../fonts/SpaceGrotesk-Bold.ttf');
 }
 @font-face {
     font-family: 'Texte';
-    src: url('/fonts/SpaceGrotesk-Regular.ttf');
+    src: url('../fonts/SpaceGrotesk-Regular.ttf');
 }
 h1, ul li{
     font-family: 'Titre';
@@ -48,7 +48,7 @@ h6,h3{
     font-size: .9em;
 }
 p, label{
-    font-family: 'Texte';
+    font-family: 'Texte'; 
     font-size: 1.125em;
 }
 label{
@@ -57,7 +57,7 @@ label{
 
 /*Background... First thing that the user will see...*/
 body{
-    background: black url('/images/Illustrations/Bathome1.png') 80% 20%/cover no-repeat;
+    background: black url('../images/Illustrations/Bathome1.png') 80% 20%/cover no-repeat;
     height: 901px;
     font-size: 16px;
 }
@@ -362,6 +362,11 @@ button{
                     display: none;
                 }
             }
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .synopsis{
+            overflow: hidden;
         }
     }
 
