@@ -72,6 +72,11 @@ body {
     font-size: 14px;
   }
 }
+@media screen and (min-width: 950px) and (max-width: 990px) {
+  .synopsis {
+    font-size: 0.9em;
+  }
+}
 /*I had to use this instead of border 'cause it's easier to make it responsive this way*/
 .lines {
   border: 2px solid rgba(102, 99, 99, 0.233);
@@ -85,7 +90,7 @@ body {
   position: fixed;
   top: 0;
   left: 5%;
-  width: 4px;
+  width: 3px;
   height: 100vh;
   background: rgba(102, 99, 99, 0.233);
 }
@@ -94,7 +99,7 @@ body {
   position: fixed;
   top: 0;
   right: 5%;
-  width: 4px;
+  width: 3px;
   height: 100vh;
   background: rgba(102, 99, 99, 0.233);
 }
@@ -152,6 +157,13 @@ nav .nav-links ul li a:hover::after {
   transform: scaleX(1);
 }
 
+/*just a little adjustement for small screen devices*/
+@media screen and (max-width: 500px) {
+  .nav-logo img {
+    padding-top: 9px;
+    width: 75%;
+  }
+}
 /*the little arrow that is there for... I don't really know why...*/
 .flèche {
   text-align: center;
@@ -178,6 +190,12 @@ nav .nav-links ul li a:hover::after {
   width: 50%;
 }
 
+@media screen and (max-width: 470px) {
+  #intro .parent {
+    padding-top: 350px;
+    margin-left: 12%;
+  }
+}
 /*The scroll bar*/
 .scroll {
   position: fixed;
@@ -366,14 +384,28 @@ button:hover {
   }
   .media .synopsis {
     border-radius: 0 20px 20px 20px;
+    height: 100%;
   }
   .media .synopsis img {
     display: none;
   }
 }
-@media screen and (max-width: 500px) {
-  .synopsis {
-    overflow: hidden;
+@media screen and (max-width: 550px) {
+  .media {
+    width: 75%;
+  }
+  .media .synopsis {
+    margin-top: 200px;
+    height: 100%;
+    position: relative;
+  }
+  .media .synopsis img {
+    display: block;
+    position: absolute;
+    top: -240px;
+  }
+  .media .arrow {
+    display: none;
   }
 }
 /*Hors section, partie vidéo... */
@@ -406,8 +438,8 @@ form input, form select {
 form input:focus, form select:focus {
   outline: none;
 }
-form [value] {
-  background-color: grey;
+form select > option {
+  background-color: rgba(9, 30, 42, 0.2078431373);
 }
 
 .one, .two, .three, .four {
@@ -444,6 +476,9 @@ form [value] {
 }
 
 /*Finaly the footer, It's all I guess*/
+footer {
+  margin-top: 20vh;
+}
 footer .copyright {
   text-align: center;
   justify-content: center;
@@ -452,8 +487,8 @@ footer .copyright {
   margin: 0 10%;
 }
 footer .copyright img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 25px;
   cursor: pointer;
   transition: filter 0.25s ease-in-out;
 }
@@ -468,6 +503,7 @@ footer .credit {
   gap: 2%;
 }
 footer .credit img {
+  padding: 0 5px;
   cursor: pointer;
   transition: filter 0.25s ease-in-out;
 }

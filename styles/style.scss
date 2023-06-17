@@ -67,6 +67,11 @@ body{
             font-size: 14px;
         }
     }
+    @media screen and (min-width: 950px) and (max-width: 990px) {
+        .synopsis{
+            font-size: .9em;
+        }
+    }
 
 /*I had to use this instead of border 'cause it's easier to make it responsive this way*/
 .lines{
@@ -79,14 +84,14 @@ body{
 .lines-ver{
     position: fixed;
     top: 0; left: 5%;
-    width: 4px;
+    width: 3px;
     height: 100vh;
     background: rgba(102, 99, 99, 0.233);
 }
 .lines-ver-2{
     position: fixed;
     top: 0; right: 5%;
-    width: 4px;
+    width: 3px;
     height: 100vh;
     background: rgba(102, 99, 99, 0.233);
 }
@@ -141,7 +146,15 @@ nav{
         }
     }
 }
-
+/*just a little adjustement for small screen devices*/
+@media screen and (max-width: 500px) {
+    .nav-logo{
+        img{
+            padding-top: 9px;
+            width: 75%;
+        }
+    }
+}
 /*the little arrow that is there for... I don't really know why...*/
 .flèche{
     text-align: center;
@@ -167,7 +180,14 @@ nav{
         width: 50%;
     }
 }
-
+@media screen and (max-width: 470px) {
+    #intro{
+        .parent{
+            padding-top: 350px;
+            margin-left: 12%;
+        }
+    }
+}
 /*The scroll bar*/
 .scroll{
     position: fixed;
@@ -358,16 +378,31 @@ button{
             width: 90%;
             .synopsis{
                 border-radius: 0 20px 20px 20px;
+                height: 100%;
                 img{
                     display: none;
                 }
             }
         }
     }
-    @media screen and (max-width: 500px) {
-        .synopsis{
-            overflow: hidden;
+    @media screen and (max-width: 550px) {
+        .media{
+            width: 75%;
+            .synopsis{
+                margin-top: 200px;
+                height: 100%;
+                position: relative;
+                img{
+                    display: block;
+                    position: absolute;
+                    top: -240px;
+                }
+            }
+            .arrow{
+                display: none;
+            }
         }
+        
     }
 
 /*Hors section, partie vidéo... */
@@ -399,8 +434,8 @@ form{
             outline: none;
         }
     }
-    [value]{
-        background-color: grey;
+    select>option{
+        background-color: #091e2a35;
     }
 }
 .one, .two, .three, .four{
@@ -438,6 +473,7 @@ form{
 
 /*Finaly the footer, It's all I guess*/
 footer{
+    margin-top: 20vh;
     .copyright{
         text-align: center;
         justify-content: center;
@@ -445,8 +481,8 @@ footer{
         align-items: center;
         margin: 0 10%;
         img{
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 25px;
             cursor: pointer;
             transition: filter .25s ease-in-out;
             &:hover{
@@ -461,6 +497,7 @@ footer{
         padding: 10%;
         gap: 2%;
         img{
+            padding: 0 5px;
             cursor: pointer;
             transition: filter .25s ease-in-out;
             &:hover{
