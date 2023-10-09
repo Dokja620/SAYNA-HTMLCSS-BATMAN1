@@ -25,3 +25,6 @@ j'y suis revenus pour "m'entrainer"😇
     Dernière chose... Les commentaires sont juste là pour indiquer quel partie
     est sur ces lignes... J'ai pas eu le temps d'expliquer lignes par ligne tout
     ce que j'ai fais.
+
+# Preview
+https://github.com/Dokja620/SAYNA-HTMLCSS-BATMAN1/assets/126552855/b2397e66-f266-4856-a26e-c4cfc11791a1
